@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    int M, N;
+    cin >> M >> N;
+
+    double mat[10][10];
+    double vetor[10];
+
+    for (int i = 0; i < M; i++) {
+        for (int j = 0; j < N; j++) {
+            cin >> mat[i][j];
+        }
+    }
+
+    for (int i = 0; i < M; i++) {
+        vetor[i] = 0;
+        for (int j = 0; j < N; j++) {
+            vetor[i] += mat[i][j];
+        }
+    }
+
+    for (int i = 0; i < M; i++) {
+        cout << vetor[i] << endl;
+    }
+
+    return 0;
+}
